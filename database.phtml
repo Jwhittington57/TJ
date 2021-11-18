@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>database</title>
+</head>
+<link href="data.css" rel="stylesheet">
+<body>
+
+<?php
+$dbServername = "localhost";
+$dbUsername = "root";
+$dbPassword = "";
+$dbname = "t&j";
+
+$conn = mysqli_connect("$dbServername", "$dbUsername", "$dbPassword", "$dbname");
+if(mysqli_connect_errno())
+{
+    echo "failed to connect!";
+    exit();
+}
+?>
+<h1>Car database</h1>
+<?php
+$result = mysqli_query($conn,"SELECT * FROM `cars`");
+if(mysqli_num_rows($result) > 0){
+    while($data = mysqli_fetch_assoc($result)){
+        echo "Make: ".$data["car_make"]. " ";
+        echo "Model: ".$data["car_model"] . " ";
+        echo "Type: ".$data["car_type"]. " ";
+        echo "Car id: ".$data["car_id"]. "<br>";
+    }
+}
+else{
+    echo "No Records Found!";
+}
+?>
+
+<h1>Customer database</h1>
+<?php
+$result = mysqli_query($conn,"SELECT * FROM `cust_login`");
+if(mysqli_num_rows($result) > 0){
+    while($data = mysqli_fetch_assoc($result)){
+        echo "username: ".$data["usrname"]. " ";
+        echo "password: ".$data["pass"] . "<br> ";
+
+    }
+}
+else{
+    echo "No Records Found!";
+}
+?>
+
+<button type="button" onclick="matrix()">Click Me!</button>
+</body>
+<script src="data.js"></script>
+</html>
+
+
+
+
+
+
+
+

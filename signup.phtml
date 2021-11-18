@@ -1,0 +1,49 @@
+<?php
+include_once 'database.phtml';
+$usrname = $_POST['usrname'];
+$pass = $_POST['pass'];
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Car database</h1>
+<?php
+$result = mysqli_query($conn,"SELECT * FROM `cars`");
+if(mysqli_num_rows($result) > 0){
+    while($data = mysqli_fetch_assoc($result)){
+        echo $data["car_make"]. " ";
+        echo $data["car_model"] . " ";
+        echo $data["car_type"]. " ";
+        echo $data["car_id"]. "<br>";
+    }
+}
+else{
+    echo "No Records Found!";
+}
+?>
+
+<h1>Customer database</h1>
+<?php
+$result = mysqli_query($conn,"SELECT * FROM `cust_login`");
+if(mysqli_num_rows($result) > 0){
+    while($data = mysqli_fetch_assoc($result)){
+        echo $data["usrname"]. " ";
+        echo $data["pass"] . "<br> ";
+
+    }
+}
+else{
+    echo "No Records Found!";
+}
+$sql = "INSERT INTO cust_login (usrname, pass) VALUES ('$usrname', '$pass');";
+mysqli_query($conn, $sql);
+header("Location: ../index.phtml?signup=success");
+?>
+</body>
+</html>

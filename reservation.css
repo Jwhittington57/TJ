@@ -1,0 +1,16 @@
+body{
+    font-family: sans-serif;
+    margin: auto;
+    max-width: 60rem;
+    background-color: #00517c;
+    border-style: solid;
+    border-width: 10px;
+    border-color:  #fff;
+    padding: 25px;
+
+
+}
+ul{
+    font-size: 15pt;
+    display: inline
+}

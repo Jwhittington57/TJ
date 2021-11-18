@@ -1,0 +1,47 @@
+body{
+    background-color: #2980B9;
+}
+h1{
+    text-align: center;
+    color: white;
+    font-family: "Lucida Calligraphy";
+}
+h3 {
+    text-align: center;
+    color: white;
+    font-family: "Lucida Calligraphy";
+}
+.Banner {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container{
+    margin-left: 375px;
+}
+.dropbtn {
+    background-color: white;
+    color: #3498DB;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-flex;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: antiquewhite;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    color: #3498DB;
+    background-color: antiquewhite;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.show {display: grid;
+}
