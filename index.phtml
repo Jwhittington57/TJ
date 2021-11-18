@@ -1,0 +1,69 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>T & J Rentals</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<h1>T&J Rental's</h1>
+<h3>We keep it simple and we keep it secure!</h3>
+<div class="banner">
+    <img src="images/banner.jpeg" width ="1400px" height="200px" class="Banner" alt="idk"></div>
+<div class="container">
+    <div class="dropdown">
+        <button onclick="myFunction1()" class="dropbtn">Make</button>
+        <div id="Make" class="dropdown-content">
+            <button id="button1"><a href="toyota.html"> Toyota </a></button>
+            <button id="button2"><a href="honda.html"> Honda </a></button>
+            <button id="button3"><a href="nissan.html"> Nissan </a></button>
+            <button id="button4"><a href="volkswagen.html"> Volkswagen </a></button>
+            <button id="button5"><a href="chevrolet.html"> Chevrolet </a></button>
+            <button id="button6"><a href="jaguar.html"> Jaguar </a></button>
+            <button id="button7"><a href="ford.html"> Ford </a></button>
+            <button id="button8"><a href="kia.html"> Kia </a></button>
+        </div>
+        <button onclick="myFunction2()" class="dropbtn">Car Type</button>
+        <div id="Type" class="dropdown-content">
+            <button id="button9"><a href="typecar.html"> Cars </a></button>
+            <button id="button10"><a href="typetruck.html"> Trucks </a></button>
+            <button id="button11"><a href="typecargotruck.html"> Cargo Trucks </a></button>
+        </div>
+        <button onclick="myFunction3()" class="dropbtn">Get Started!</button>
+        <div id="getStarted" class="dropdown-content">
+            <button id="button12"><a href="getStarted.html"> Rental Time! </a></button>
+        </div>
+        <button onclick="myFunction4()" class="dropbtn">Randomizer</button>
+        <div id="Randomizer" class="dropdown-content">
+            <button id="button13">Randomizer</button>
+        </div>
+        <button onclick="myFunction5()" class="dropbtn">Search</button>
+        <div id="Search" class="dropdown-content">
+            <button onclick="zipCode()">Enter Zip Here</button>
+        </div>
+        <button onclick="myFunction6()" class="dropbtn">Member?</button>
+        <div id="signIn" class="dropdown-content">
+            <button id="button14"><a href="Signin.html"> Sign In </a></button>
+            <button id="button15"><a href="register.html"> Register</a></button>
+        </div>
+    </div>
+</div>
+
+
+
+<!--
+<p>Please enter your zipcode</p>
+
+<p>randomizer</p>
+-->
+
+</body>
+<script src="index.js"></script>
+</html>
