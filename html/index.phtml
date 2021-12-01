@@ -1,0 +1,133 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>T & J Rentals</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+<h1>T&J Rental's</h1>
+<h3>We keep it simple and we keep it secure!</h3>
+<div class="banner">
+    <img src="../images/banner.jpeg" width ="1400px" height="200px" class="Banner" alt="poster"></div>
+<div class="container0">
+    <div class="dropdown">
+        <button onclick="myFunction1()" class="dropbtn">Make</button>
+        <div id="Make" class="dropdown-content">
+            <button id="button1"><a href="cars.html#Toyota"> Toyota </a></button>
+            <button id="button2"><a href="cars.html#Dodge"> Dodge </a></button>
+            <button id="button3"><a href="cars.html#Ram"> Ram </a></button>
+            <button id="button4"><a href="cars.html#Nissian"> Nissan </a></button>
+            <button id="button5"><a href="cars.html#Chevorlet"> Chevrolet </a></button>
+
+            <button id="button8"><a href="cars.html"> Kia </a></button>
+        </div>
+        <button onclick="myFunction2()" class="dropbtn">Car Type</button>
+        <div id="Type" class="dropdown-content">
+            <button id="button11"><a href=""> Luxury </a></button>
+            <button id="button9"><a href="cars.html#Car"> Cars </a></button>
+            <button id="button10"><a href="cars.html#Trucks"> Trucks </a></button>
+            <button id="button11"><a href="cars.html#Suv"> Suvs </a></button>
+        </div>
+        <button onclick="myFunction3()" class="dropbtn">Get Started!</button>
+        <div id="getStarted" class="dropdown-content">
+            <button id="button12"><a href="getStarted.html"> Rental Time! </a></button>
+        </div>
+        <button onclick="myFunction4()" class="dropbtn">Randomizer</button>
+        <div id="Randomizer" class="dropdown-content">
+            <button id="button13">Randomizer</button>
+        </div>
+        <button onclick="myFunction5()" class="dropbtn">Search</button>
+        <div id="Search" class="dropdown-content">
+            <button onclick="zipCode()">Enter Zip Here</button>
+        </div>
+        <button onclick="myFunction6()" class="dropbtn">Member?</button>
+        <div id="signIn" class="dropdown-content">
+            <button id="button14"><a href="Signin.html"> Sign In </a></button>
+            <button id="button15"><a href="register.html"> Register</a></button>
+        </div>
+    </div>
+</div>
+
+<!-- Container for the image gallery -->
+<div class="container">
+
+    <!-- Full-width images with number text -->
+    <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img src="../images/Luxury/scat.jpg" style="width:75%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="../images/Luxury/stang.jpg" style="width:75%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="../images/Luxury/f-type.jpg" style="width:75%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="../images/Luxury/rover.jpg" style="width:75%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="../images/Ram1.jpg" style="width:75%">
+    </div>
+
+    <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="../images/charger.jpg" style="width:75%">
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Image text -->
+    <div class="caption-container">
+        <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail images -->
+    <div class="row">
+        <div class="column">
+            <img class="demo cursor" src="../images/Luxury/scat.jpg" style="width:100%" onclick="currentSlide(1)" alt="2021 Dodge Challenger" >
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="../images/Luxury/stang.jpg" style="width:100%" onclick="currentSlide(2)" alt="2020 Ford Mustang">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="../images/Luxury/f-type.jpg" style="width:100%" onclick="currentSlide(3)" alt="2022 Jaguar F-Type">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="../images/Luxury/rover.jpg" style="width:100%" onclick="currentSlide(4)" alt="2020 Land Rover">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="../images/Ram1.jpg" style="width:100%" onclick="currentSlide(5)" alt="2016 Ram 1500">
+        </div>
+        <div class="column">
+            <img class="demo cursor" src="../images/charger.jpg" style="width:100%" onclick="currentSlide(6)" alt="2018 Dodge Charger">
+        </div>
+    </div>
+</div>
+
+<!--
+<p>Please enter your zipcode</p>
+
+<p>randomizer</p>
+-->
+
+</body>
+<script src="../javascript/index.js"></script>
+</html>
