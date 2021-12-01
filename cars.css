@@ -1,0 +1,21 @@
+body{
+    background-color: #2980B9;
+}
+h1{
+    text-align: center;
+    color: white;
+    font-family: "Lucida Calligraphy";
+}
+h3 {
+    text-align: center;
+    color: white;
+    font-family: "Lucida Calligraphy";
+}
+.Banner {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container{
+    margin-left: 375px;
+}

@@ -38,7 +38,7 @@ if (isset($_POST['signIn']))
                   $_SESSION[] = $row['cust_id'];
                   $_SESSION[] = $row['usrname'];
 
-                  header("Location: ../index.phtml?SUCCESS");
+                  header("Location: ../index.phtml?SUCCESS99");
                   exit();
               }
             }
@@ -50,7 +50,9 @@ if (isset($_POST['signIn']))
         }
     }
 }
+/*
 else {
-    header("Location: ../index.phtml?signup=success");
+    header("Location: ../index.phtml?signup=success1");
     exit();
 }
+*/
