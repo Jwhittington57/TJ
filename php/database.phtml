@@ -21,8 +21,10 @@ if(mysqli_connect_errno())
     exit();
 }
 ?>
+
 <h1>Car database</h1>
 <?php
+
 $result = mysqli_query($conn,"SELECT * FROM `cars`");
 if(mysqli_num_rows($result) > 0){
     while($data = mysqli_fetch_assoc($result)){
