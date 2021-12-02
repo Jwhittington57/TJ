@@ -1,0 +1,27 @@
+<?php
+session_start();
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/Signin.css">
+</head>
+<body>
+<div>
+    <form action="../php/carManager.php" method="POST">
+        <input type="text" name="make" placeholder ="car make">
+        <br>
+        <input type="text" name="model" placeholder ="car model">
+        <br>
+        <input type="text" name="type" placeholder ="car type">
+        <br>
+        <button type="submit" name="submit">add vehicle</button>
+    </form>
+</div>
+
+</body>
+</html>

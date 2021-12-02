@@ -1,0 +1,48 @@
+<?php
+session_start();
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookings</title>
+    <link rel="stylesheet" href="../css/Signin.css">
+</head>
+<body>
+<div>
+    <form action="../php/checkBooking.php" method="post">
+        <input type="text" name="name" placeholder="enter username">
+        <br>
+        <input type="text" name="car" placeholder="enter car...">
+        <br>
+
+        <button type="submit" name="checkBooking">Check Booking</button>
+    </form>
+</div>
+<?php
+if(isset($_SESSION["username"]))
+{
+    echo "<p class=\"mycss\">Reservation found</p>";
+    echo "<p class=\"mycss\"> Your reservation starts: " . $_SESSION["start_date"] .  " and ends: "  . $_SESSION["end_date"] . "</p>";
+    echo "<p> Would you like to make changes or delete this reservation?</p>";
+   echo "
+    <form action='../php/reserve.php' method='POST'>
+    <input type='text' name='username' placeholder ='enter username'>
+    <br>
+   <p>Enter pickup Date: <input type='date' name='start_date' placeholder ='enter pickup date'></p> 
+    <br>
+   <p>Enter drop off date<input type='date' name='end_date' placeholder ='enter drop off date'></p> 
+    <br>
+    <input type='text' name='car' placeholder='enter new car'>
+    <br>
+    <button type='submit' name='ChangeRes'>Change Reservation</button>
+</form>
+    ";
+}
+?>
+<p></p>
+</body>
+</html>

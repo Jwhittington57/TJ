@@ -1,0 +1,34 @@
+<?php
+session_start();
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link href="../css/reservation.css" rel="stylesheet">
+<body>
+
+
+<img src="../images/2021-Toyota-Sienna-25.jpg" width ="50%" height="50%">
+
+<p>You are reserving the 2021 Toyota Sinenta</p>
+
+<form action="../php/reserve.php" method="POST">
+    <input type="text" name="username" placeholder ="enter username">
+    <br>
+    <input type="date" name="start_date" placeholder ="enter pickup date">
+    <br>
+    <input type="date" name="end_date" placeholder ="enter drop off date">
+    <br>
+    <input type="text" name="car" value="Sinenta">
+    <br>
+    <button type="submit" name="ReserveNow">Reserve Now</button>
+</form>
+
+
+</body>
+</html>
