@@ -23,6 +23,6 @@ if(isset($_POST["ReserveNow"])) {
 
     $sql = "INSERT INTO reservation (username, start_date, end_date, car) VALUES ('$username', '$start', '$end', '$car');";
     mysqli_query($conn, $sql);
-    header("Location: ../html/Reservation.phtml?reservation_success");
+    header("Location: ../html/success.html?reservation_success");
 
 }

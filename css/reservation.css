@@ -14,3 +14,8 @@ ul{
     font-size: 15pt;
     display: inline
 }
+
+.banner{
+    text-align: center;
+    position: center;
+}

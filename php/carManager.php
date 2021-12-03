@@ -10,5 +10,5 @@ $type = $_POST['type'];
 
 $sql = "INSERT INTO cars (car_make, car_model, car_type) VALUES ('$make', '$model', '$type');";
 mysqli_query($conn, $sql);
-header("Location: html/admin.phtml?car added");
+header("Location: ../html/success.html?car added");
 ?>

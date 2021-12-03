@@ -74,13 +74,10 @@ function emptyInputLogin($username, $pwd)
 
 function loginUser($conn, $username, $pwd)
 {
+
     $uidExists = uidExists($conn,$username);
 
-    if($username = "admin" && $pwd = "0000")
-    {
-        header("Location: admin.phtml");
-        exit();
-    }
+
 
     if($uidExists === false)
     {
@@ -102,7 +99,13 @@ function loginUser($conn, $username, $pwd)
         $_SESSION["cust_id"] = $uidExists["cust_id"];
         $_SESSION["usrname"] = $uidExists["usrname"];
 
-        header("Location: loggedin.phtml?succss99");
+        header("Location: ../phtml/loggedin.phtml?succss99");
+        exit();
+    }
+
+    if($username === "admin" && $pwd === "0000")
+    {
+        header("Location: ../phtml/admin.phtml");
         exit();
     }
 }

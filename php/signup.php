@@ -8,5 +8,5 @@ $pass = $_POST['pass'];
 
 $sql = "INSERT INTO cust_login (usrname, pass) VALUES ('$usrname', '$pass');";
 mysqli_query($conn, $sql);
-header("Location: php/index.phtml");
+header("Location: ../html/Signin.html");
 

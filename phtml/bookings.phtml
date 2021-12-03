@@ -36,8 +36,42 @@ if(isset($_SESSION["username"]))
     <br>
    <p>Enter drop off date<input type='date' name='end_date' placeholder ='enter drop off date'></p> 
     <br>
-    <input type='text' name='car' placeholder='enter new car'>
-    <br>
+   <select name = 'car'>
+        <option name='car' value = 'Challenger'> Challenger
+        </option>
+        <option name='car' value = 'LandRover'> Land Rover
+        </option>
+        <option name='car' value = 'Ftype'> F-type
+        </option>
+        <option name='car' value = 'Mustang'> Mustang
+        </option>
+
+
+ <option value = 'Sinenna'> Sienna
+        </option>
+        <option value = 'Camry'> Camry
+        </option>
+        <option value = 'Altima'> Altima
+        </option>
+        <option value = 'Charger'> Charger
+        </option>
+        <option value = 'Durango'> Durango
+        </option>
+        <option value = 'Ram'> Ram
+        </option>
+        <option value = 'Dakota'> Dakota
+        </option>
+        <option value = '350z'> 350z
+        </option>
+        <option value = 'Sedona'> Sedona
+        </option>
+        <option value = 'Impala'> Impala
+        </option>
+        <option value = 'Tahoe'> Tahoe
+        </option>
+        <option value = 'Soul'> Soul
+        </option>
+    </select>
     <button type='submit' name='ChangeRes'>Change Reservation</button>
 </form>
     ";

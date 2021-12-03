@@ -7,7 +7,7 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>LuxRes</title>
 </head>
 <link href="../css/reservation.css" rel="stylesheet">
 <body>
@@ -15,7 +15,7 @@ session_start();
 
 <img src="../images/banner.jpeg" width ="500px" height="200px">
 
-<h1>Select your car!</h1>
+<h1>Reserve your luxury car here!</h1>
 
 <form action="../php/reserve.php" method="POST">
     <input type="text" name="username" placeholder ="enter username">
@@ -25,30 +25,15 @@ session_start();
     <input type="date" name="end_date" placeholder ="enter drop off date">
     <br>
     <select name = "car">
-        <option value = "Sinenna"> Sienna
+        <option name="car" value = "Challenger"> Challenger
         </option>
-        <option value = "Camry"> Camry
+        <option name="car" value = "LandRover"> Land Rover
         </option>
-        <option value = "Altima"> Altima
+        <option name="car" value = "Ftype"> F-type
         </option>
-        <option value = "Charger"> Charger
+        <option name="car" value = "Mustang"> Mustang
         </option>
-        <option value = "Durango"> Durango
-        </option>
-        <option value = "Ram"> Ram
-        </option>
-        <option value = "Dakota"> Dakota
-        </option>
-        <option value = "350z"> 350z
-        </option>
-        <option value = "Sedona"> Sedona
-        </option>
-        <option value = "Impala"> Impala
-        </option>
-        <option value = "Tahoe"> Tahoe
-        </option>
-        <option value = "Soul"> Soul
-        </option>
+
     </select>
     <br>
     <button type="submit" name="ReserveNow">Reserve Now</button>
