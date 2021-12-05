@@ -13,25 +13,27 @@ session_start();
 <body>
 
 
-<img src="../images/banner.jpeg" width ="500px" height="200px">
+<img src="../images/banner.jpeg" width="500px" height="200px">
 
 <h1>Reserve your luxury car here!</h1>
 
 <form action="../php/reserve.php" method="POST">
-    <input type="text" name="username" placeholder ="enter username">
+    <input type="text" name="username" placeholder="enter username">
     <br>
-    <input type="date" name="start_date" placeholder ="enter pickup date">
+    <input type="date" name="start_date" placeholder="enter pickup date">
     <br>
-    <input type="date" name="end_date" placeholder ="enter drop off date">
+    <input type="date" name="end_date" placeholder="enter drop off date">
     <br>
-    <select name = "car">
-        <option name="car" value = "Challenger"> Challenger
+    <select name="car">
+        <option hidden="">Choose your car</option>
+
+        <option name="car" value="Challenger"> Challenger
         </option>
-        <option name="car" value = "LandRover"> Land Rover
+        <option name="car" value="LandRover"> Land Rover
         </option>
-        <option name="car" value = "Ftype"> F-type
+        <option name="car" value="Ftype"> F-type
         </option>
-        <option name="car" value = "Mustang"> Mustang
+        <option name="car" value="Mustang"> Mustang
         </option>
 
     </select>

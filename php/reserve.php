@@ -1,19 +1,19 @@
 <?php
-if(isset($_POST["ChangeRes"])) {
+if (isset($_POST["ChangeRes"])) {
     include_once 'database.phtml';
-$username = $_POST['username'];
-$start = $_POST['start_date'];
-$end = $_POST['end_date'];
-$car = $_POST['car'];
+    $username = $_POST['username'];
+    $start = $_POST['start_date'];
+    $end = $_POST['end_date'];
+    $car = $_POST['car'];
 
 
-$sql = "UPDATE reservation  SET start_date = '$start', end_date = '$end', car = '$car' WHERE username = '$username';";
-mysqli_query($conn, $sql);
-header("Location: ../html/success.html?reservation_updated");
+    $sql = "UPDATE reservation  SET start_date = '$start', end_date = '$end', car = '$car' WHERE username = '$username';";
+    mysqli_query($conn, $sql);
+    header("Location: ../html/success.html?reservation_updated");
 }
 
 
-if(isset($_POST["ReserveNow"])) {
+if (isset($_POST["ReserveNow"])) {
     include_once 'database.phtml';
     $username = $_POST['username'];
     $start = $_POST['start_date'];

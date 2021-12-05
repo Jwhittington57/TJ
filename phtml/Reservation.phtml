@@ -7,53 +7,56 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>CarRes</title>
 </head>
 <link href="../css/reservation.css" rel="stylesheet">
 <body>
 
 
-<img src="../images/banner.jpeg" width ="500px" height="200px">
+<img src="../images/banner.jpeg" width="500px" height="200px">
 
 <h1>Select your car!</h1>
-
+<h3>Not a member sign up here: <a href="../html/register.html">Sign up</a> </h3>
 <form action="../php/reserve.php" method="POST">
-    <input type="text" name="username" placeholder ="enter username">
+    <input type="text" name="username" placeholder="enter username">
     <br>
-    <input type="date" name="start_date" placeholder ="enter pickup date">
+    <input type="date" name="start_date" placeholder="enter pickup date">
     <br>
-    <input type="date" name="end_date" placeholder ="enter drop off date">
+    <input type="date" name="end_date" placeholder="enter drop off date">
     <br>
-    <select name = "car">
-        <option value = "Sinenna"> Sienna
+    <select name="car">
+        <option hidden="">Choose your car</option>
+        <opiton value="Caravan">Caravan</opiton>
+
+        <option value="Sinenna"> Sienna
         </option>
-        <option value = "Camry"> Camry
+        <option value="Camry"> Camry
         </option>
-        <option value = "Altima"> Altima
+        <option value="Altima"> Altima
         </option>
-        <option value = "Charger"> Charger
+        <option value="Charger"> Charger
         </option>
-        <option value = "Durango"> Durango
+        <option value="Durango"> Durango
         </option>
-        <option value = "Ram"> Ram
+        <option value="Ram"> Ram
         </option>
-        <option value = "Dakota"> Dakota
+        <option value="Dakota"> Dakota
         </option>
-        <option value = "350z"> 350z
+        <option value="350z"> 350z
         </option>
-        <option value = "Sedona"> Sedona
+        <option value="Sedona"> Sedona
         </option>
-        <option value = "Impala"> Impala
+        <option value="Impala"> Impala
         </option>
-        <option value = "Tahoe"> Tahoe
+        <option value="Tahoe"> Tahoe
         </option>
-        <option value = "Soul"> Soul
+        <option value="Soul"> Soul
         </option>
     </select>
     <br>
     <button type="submit" name="ReserveNow">Reserve Now</button>
 </form>
-
+<a href="index.phtml">Return Home</a>
 
 </body>
 </html>

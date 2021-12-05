@@ -1,7 +1,7 @@
 body{
     background-color: #2980B9;
 }
-h1{
+h1, h2{
     text-align: center;
     color: white;
     font-family: "Lucida Calligraphy";
@@ -18,4 +18,10 @@ h3 {
 }
 .container{
     margin-left: 375px;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }

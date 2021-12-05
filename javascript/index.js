@@ -1,8 +1,9 @@
-function myFunction1(){
+function make() {
     document.getElementById("Make").classList.toggle("show");
 }
+
 // Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
@@ -14,11 +15,13 @@ window.onclick = function(event) {
         }
     }
 }
-function myFunction2(){
+
+function carType() {
     document.getElementById("Type").classList.toggle("show");
 }
+
 // Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
@@ -30,11 +33,13 @@ window.onclick = function(event) {
         }
     }
 }
-function myFunction3(){
+
+function register() {
     document.getElementById("getStarted").classList.toggle("show");
 }
+
 // Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
@@ -46,11 +51,13 @@ window.onclick = function(event) {
         }
     }
 }
-function myFunction4(){
+
+function randomizer() {
     document.getElementById("Randomizer").classList.toggle("show");
 }
+
 // Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
@@ -62,11 +69,13 @@ window.onclick = function(event) {
         }
     }
 }
-function myFunction5(){
+
+function myFunction5() {
     document.getElementById("Search").classList.toggle("show");
 }
+
 // Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
@@ -78,20 +87,22 @@ window.onclick = function(event) {
         }
     }
 }
+
 function zipCode() {
     'use strict';
     var text;
     var zip = prompt("Please enter your Zip:", "22812");
-    if(zip == null || zip == " ")
-    {
+    if (zip == null || zip == " ") {
         text = "no zip entered. please enter zip"
     }
 }
-function myFunction6(){
+
+function memberbtn() {
     document.getElementById("signIn").classList.toggle("show");
 }
+
 // Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (!event.target.matches('.dropbtn')) {
         var dropdowns = document.getElementsByClassName("dropdown-content");
         var i;
@@ -123,15 +134,44 @@ function showSlides(n) {
     var slides = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("demo");
     var captionText = document.getElementById("caption");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    captionText.innerHTML = dots[slideIndex-1].alt;
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    captionText.innerHTML = dots[slideIndex - 1].alt;
+}
+
+function random() {
+    var pick = Math.floor(Math.random() * 5);
+
+    if (pick == 0) {
+        window.location.href = "../html/cars.html#Toyota"
+    }
+
+    if (pick == 1) {
+        window.location.href = "../html/cars.html#Dodge"
+    }
+
+    if (pick == 2) {
+        window.location.href = "../html/cars.html#Ram"
+    }
+
+    if (pick == 3) {
+        window.location.href = "../html/cars.html#Nissian"
+    }
+
+    if (pick == 4) {
+        window.location.href = "../html/cars.html#Chevorlet"
+    }
+
 }

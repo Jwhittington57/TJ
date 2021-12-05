@@ -7,19 +7,27 @@ session_start();
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Add car</title>
     <link rel="stylesheet" href="../css/Signin.css">
 </head>
 <body>
 <div>
     <form action="../php/carManager.php" method="POST">
-        <input type="text" name="make" placeholder ="car make">
+        <h2>Enter the details of the car you'd like to add</h2>
+        <input type="text" name="make" placeholder="car make">
         <br>
-        <input type="text" name="model" placeholder ="car model">
+        <input type="text" name="model" placeholder="car model">
         <br>
-        <input type="text" name="type" placeholder ="car type">
+        <input type="text" name="type" placeholder="car type">
         <br>
-        <button type="submit" name="submit">add vehicle</button>
+        <button type="submit" name="add">add vehicle</button>
+    </form>
+</div>
+
+<div>
+    <form action="../php/carManager.php" method="POST">
+        <input type="text" name="make" placeholder="Enter the car make you'd like to delete.">
+        <button type="submit" name="remove">add vehicle</button>
     </form>
 </div>
 

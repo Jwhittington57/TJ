@@ -3,8 +3,7 @@ session_start();
 ?>
 
 <?php
-if(isset($_SESSION["usrname"]))
-{
+if (isset($_SESSION["usrname"])) {
     echo "<p class=\"mycss\">login succssesful!</p>";
     echo "<p class=\"mycss\">Hello there " . $_SESSION["usrname"] . "</p>";
 
@@ -25,9 +24,8 @@ if(isset($_SESSION["usrname"]))
 <body>
 
 <style>
-    .mycss
-    {
-       font-weight: bold;
+    .mycss {
+        font-weight: bold;
         text-align: center;
 
     }
@@ -35,10 +33,10 @@ if(isset($_SESSION["usrname"]))
 <h1>T&J Rental's</h1>
 <h3>We keep it simple and we keep it secure!</h3>
 <div class="banner">
-    <img src="../images/banner.jpeg" width ="1400px" height="200px" class="Banner" alt="poster"></div>
+    <img src="../images/banner.jpeg" width="1400px" height="200px" class="Banner" alt="poster"></div>
 <div class="container0">
     <div class="dropdown">
-        <button onclick="myFunction1()" class="dropbtn">Make</button>
+        <button onclick="make()" class="dropbtn">Make</button>
         <div id="Make" class="dropdown-content">
             <button id="button1"><a href="../html/cars.html#Toyota"> Toyota </a></button>
             <button id="button2"><a href="../html/cars.html#Dodge"> Dodge </a></button>
@@ -48,26 +46,23 @@ if(isset($_SESSION["usrname"]))
 
             <button id="button8"><a href="../html/cars.html"> Kia </a></button>
         </div>
-        <button onclick="myFunction2()" class="dropbtn">Car Type</button>
+        <button onclick="carType()" class="dropbtn">Car Type</button>
         <div id="Type" class="dropdown-content">
             <button id="button11"><a href=""> Luxury </a></button>
             <button id="button9"><a href="../html/cars.html#Car"> Cars </a></button>
             <button id="button10"><a href="../html/cars.html#Trucks"> Trucks </a></button>
             <button id="button11"><a href="../html/cars.html#Suv"> Suvs </a></button>
         </div>
-        <button onclick="myFunction3()" class="dropbtn">Get Started!</button>
+        <button onclick="register()" class="dropbtn">Get Started!</button>
         <div id="getStarted" class="dropdown-content">
             <button id="button12"><a href="getStarted.html"> Rental Time! </a></button>
         </div>
-        <button onclick="myFunction4()" class="dropbtn">Randomizer</button>
+        <button onclick="randomizer()" class="dropbtn">Randomizer</button>
         <div id="Randomizer" class="dropdown-content">
             <button id="button13">Randomizer</button>
         </div>
-        <button onclick="myFunction5()" class="dropbtn">Search</button>
-        <div id="Search" class="dropdown-content">
-            <button onclick="zipCode()">Enter Zip Here</button>
-        </div>
-        <button onclick="myFunction6()" class="dropbtn">bookings</button>
+
+        <button onclick="memberbtn()" class="dropbtn">bookings</button>
         <div id="signIn" class="dropdown-content">
             <button id="button14"><a href="bookings.phtml"> Check Reservation </a></button>
 
@@ -121,22 +116,28 @@ if(isset($_SESSION["usrname"]))
     <!-- Thumbnail images -->
     <div class="row">
         <div class="column">
-            <img class="demo cursor" src="../images/Luxury/scat.jpg" style="width:100%" onclick="currentSlide(1)" alt="2021 Dodge Challenger" >
+            <img class="demo cursor" src="../images/Luxury/scat.jpg" style="width:100%" onclick="currentSlide(1)"
+                 alt="2021 Dodge Challenger">
         </div>
         <div class="column">
-            <img class="demo cursor" src="../images/Luxury/stang.jpg" style="width:100%" onclick="currentSlide(2)" alt="2020 Ford Mustang">
+            <img class="demo cursor" src="../images/Luxury/stang.jpg" style="width:100%" onclick="currentSlide(2)"
+                 alt="2020 Ford Mustang">
         </div>
         <div class="column">
-            <img class="demo cursor" src="../images/Luxury/f-type.jpg" style="width:100%" onclick="currentSlide(3)" alt="2022 Jaguar F-Type">
+            <img class="demo cursor" src="../images/Luxury/f-type.jpg" style="width:100%" onclick="currentSlide(3)"
+                 alt="2022 Jaguar F-Type">
         </div>
         <div class="column">
-            <img class="demo cursor" src="../images/Luxury/rover.jpg" style="width:100%" onclick="currentSlide(4)" alt="2020 Land Rover">
+            <img class="demo cursor" src="../images/Luxury/rover.jpg" style="width:100%" onclick="currentSlide(4)"
+                 alt="2020 Land Rover">
         </div>
         <div class="column">
-            <img class="demo cursor" src="../images/Ram1.jpg" style="width:100%" onclick="currentSlide(5)" alt="2016 Ram 1500">
+            <img class="demo cursor" src="../images/Ram1.jpg" style="width:100%" onclick="currentSlide(5)"
+                 alt="2016 Ram 1500">
         </div>
         <div class="column">
-            <img class="demo cursor" src="../images/charger.jpg" style="width:100%" onclick="currentSlide(6)" alt="2018 Dodge Charger">
+            <img class="demo cursor" src="../images/charger.jpg" style="width:100%" onclick="currentSlide(6)"
+                 alt="2018 Dodge Charger">
         </div>
     </div>
 </div>

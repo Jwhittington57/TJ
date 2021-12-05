@@ -3,7 +3,6 @@ session_start();
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,12 +22,11 @@ session_start();
     </form>
 </div>
 <?php
-if(isset($_SESSION["username"]))
-{
+if (isset($_SESSION["username"])) {
     echo "<p class=\"mycss\">Reservation found</p>";
-    echo "<p class=\"mycss\"> Your reservation starts: " . $_SESSION["start_date"] .  " and ends: "  . $_SESSION["end_date"] . "</p>";
+    echo "<p class=\"mycss\"> Your reservation starts: " . $_SESSION["start_date"] . " and ends: " . $_SESSION["end_date"] . "</p>";
     echo "<p> Would you like to make changes or delete this reservation?</p>";
-   echo "
+    echo "
     <form action='../php/reserve.php' method='POST'>
     <input type='text' name='username' placeholder ='enter username'>
     <br>
@@ -37,6 +35,7 @@ if(isset($_SESSION["username"]))
    <p>Enter drop off date<input type='date' name='end_date' placeholder ='enter drop off date'></p> 
     <br>
    <select name = 'car'>
+   <option hidden=''>Choose your car</option>
         <option name='car' value = 'Challenger'> Challenger
         </option>
         <option name='car' value = 'LandRover'> Land Rover
@@ -71,12 +70,13 @@ if(isset($_SESSION["username"]))
         </option>
         <option value = 'Soul'> Soul
         </option>
+         <opiton value='Caravan'>Caravan</opiton>
     </select>
     <button type='submit' name='ChangeRes'>Change Reservation</button>
 </form>
     ";
 }
 ?>
-<p></p>
+<a href="loggedin.phtml">Return Home</a>
 </body>
 </html>

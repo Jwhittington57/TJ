@@ -1,5 +1,5 @@
 function matrix() {
-document.body.style.backgroundColor = "#000";
+    document.body.style.backgroundColor = "#000";
 
     var canvas = document.body.appendChild(document.createElement('canvas')),
         context = canvas.getContext('2d');

@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST["checkBooking"])) {
+if (isset($_POST["checkBooking"])) {
     $username = $_POST["name"];
     $car = $_POST["car"];
 
@@ -12,9 +12,7 @@ if(isset($_POST["checkBooking"])) {
     }
 
     bookingRequest($conn, $username, $car);
-}
-else
-{
+} else {
     header("location: bookings.phtml?emptyfields");
     exit();
 }
